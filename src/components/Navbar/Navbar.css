@@ -1,0 +1,14 @@
+/* HEADER */
+.containerHeader{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    background-color:#16032fa2;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: "Outfit";
+    font-size:1.5vw;
+}
