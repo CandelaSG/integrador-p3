@@ -2,10 +2,10 @@ import React from "react";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import Home from "./components/Home/Home";
-import Favorito from "./components/Favorito/Favorito";
-import VerTodo from "./components/VerTodo/VerTodo";
-import ResultadoBusqueda from "./components/ResultadoBusqueda/ResultadoBusqueda";
+import Home from "./screens/Home/Home";
+import Favorito from "./screens/Favorito/Favorito";
+import VerTodo from "./screens/VerTodo/VerTodo";
+import ResultadoBusqueda from "./screens/ResultadoBusqueda/ResultadoBusqueda";
 
 import { Link, Route, Switch} from 'react-router-dom';
 
