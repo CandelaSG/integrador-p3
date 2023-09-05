@@ -10,11 +10,10 @@ a:link, a:visited, a:active:hover{
     cursor: pointer;
 }
 main{
-    background-color: #22014d;
-    /* background-image: url(/img/background.png); */
-    background-repeat: repeat;
-    background-size: contain;
-    margin: 0;
+    /* background-color: #22014d; */
+    background-image: url(/img/background.png);
+    background-repeat:repeat;
+    background-size:contain;
     font-family:Arial, Helvetica, sans-serif;
 }
 /* body{
@@ -149,7 +148,7 @@ h3 {
 .infoDetail{
     padding-left: 3vw;
     color: white;
-    width: 40vw;
+    width: 45vw;
 }
 
 .listaDetail{

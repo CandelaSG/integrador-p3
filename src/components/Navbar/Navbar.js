@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css'
+import { Link } from "react-router-dom";
 
 function Navbar(){
 
@@ -7,7 +8,7 @@ function Navbar(){
         <header className="containerHeader">
             {/* LOGO */}
             <article>
-                <a href="./home.html"><img className="logo" src="./img/logo.png" alt="Logo Infinity"/></a>
+                <Link to="/"><img className="logo" src="./img/logo.png" alt="Logo Infinity"/></Link>
             </article>
             {/* MENU NAVEGACIÓN */}
             <article className="containerMenu">

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
 
-let imagen = 'https://image.tmdb.org/t/p/w500';
+let imagen = 'https://image.tmdb.org/t/p/w342';
 
 class Card extends Component {
     constructor(props) {
@@ -20,10 +20,10 @@ class Card extends Component {
                 <img className='poster posterEvento' src= {imagen + this.props.contentMovie.poster_path}  alt={this.props.contentMovie.title}/>
                 </Link>
 
-                <a href=''>
+                <Link to={`/detallePelicula/id/${this.props.contentMovie.id}`}>
                 {this.props.contentMovie.title} 
-                </a>
-                {/* <a href=''>
+                </Link>
+                {/* <Link to={`/detallePelicula/id/${this.props.contentMovie.id}`}>
                 {this.props.contentMovie.overview} 
                 </a> */}
             </article>

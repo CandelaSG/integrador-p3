@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
+import { Link } from "react-router-dom";
 
-let imagen = 'https://image.tmdb.org/t/p/w500';
+let imagen = 'https://image.tmdb.org/t/p/w342';
 
 class CardSerie extends Component {
     constructor(props) {
@@ -8,19 +9,19 @@ class CardSerie extends Component {
         this.state = {}
     };
     render(){
-        /* console.log(this.props.contentSerie); */
+        console.log(this.props.contentSerie);
         return (
             <article className='pelicula'>
                 {/* {console.log(this.props.contentSerie.name)} */}
-                <a href=''>
+                <Link to={`/detalleSeries/id/${this.props.contentSerie.id}`}>
                     <img className='poster posterEvento' src={imagen + this.props.contentSerie.poster_path} alt={this.props.contentSerie.name}/>
-                </a>
-                <a href=''>
+                </Link>
+                <Link to={`/detalleSeries/id/${this.props.contentSerie.id}`}>
                 {this.props.contentSerie.name}
-                </a>
-               {/*  <a href=''>
+                </Link>
+               {/*  <Link to={`/detalleSeries/id/${this.props.contentSerie.id}`}>
                 {this.props.contentSerie.overview}
-                </a> */}
+                </Link> */}
             </article>
             
         )
