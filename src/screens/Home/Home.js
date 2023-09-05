@@ -52,18 +52,23 @@ class Home extends Component {
 
   render() {
     return(
-      <React.Fragment>
+
+        <main>
+          <div className="containerPoster">
+            <img className="posterEstreno" src="/img/posterInfinity.png" alt="Poster Infinity"/>
+          </div>
         <h2>MOVIES</h2>
-        <h2>UPCOMING</h2>
+        <h3>UPCOMING</h3>
         <CardsContainer infoMovies={this.state.upcoming}/>
-        <h2>NOW PLAYING</h2>
+        <h3>NOW PLAYING</h3>
         <CardsContainer infoMovies={this.state.now_playing}/>
         <h2>SERIES</h2>
-        <h2>POPULAR</h2>
+        <h3>POPULAR</h3>
         <CardsContainer infoSeries={this.state.popular}/>
-        <h2>TOP RATED</h2>
+        <h3>TOP RATED</h3>
         <CardsContainer infoSeries={this.state.top_rated}/>
-      </React.Fragment>
+        </main>
+
     ) 
   }
 }

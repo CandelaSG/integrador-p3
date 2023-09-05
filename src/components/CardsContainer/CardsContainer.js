@@ -13,22 +13,24 @@ class CardsContainer extends Component {
             <section className='containerHome peliculasPopulares'>
                 
                 {this.props.infoMovies ?
-                this.props.infoMovies.map((pelicula , idx) =>(
-                    <CardMovie 
-                    key={pelicula.title + idx}
-                    contentMovie={pelicula}
-                    />
-                ))
-            : <h2>Cargando...</h2>}
+                this.props.infoMovies.map((pelicula , idx) =>{
+                    if (idx < 6) {
+                       return (<CardMovie key={pelicula.title + idx} contentMovie={pelicula} />
+                        )
+                    }
+                    })
+
+            : false } {/* <h2>Cargando...</h2> */}
 
             {this.props.infoSeries ?
-                this.props.infoSeries.map((serie , idx) =>(
-                    <CardSerie 
-                    key={serie.name + idx}
-                    contentSerie={serie}
-                    />
-                ))
-            : <h2>Cargando...</h2>}
+                this.props.infoSeries.map((serie , idx) =>{
+                    if (idx < 6) {
+                        return (<CardSerie  key={serie.name + idx}  contentSerie={serie}/>
+                        )
+                     }    
+                })
+
+            : false} {/* <h2>Cargando...</h2> */}
             </section>
         )
     }

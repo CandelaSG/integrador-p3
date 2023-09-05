@@ -13,9 +13,9 @@ function Navbar(){
             <article className="containerMenu">
                 <nav>
                     <ul>
-                        <li className="menu"> <a href="./home.html">HOME</a></li> |
-                        <li className="menu"> <a href="./favourite.html">FAVORITES</a></li> |
-                        <li className="menu"> <a href="./genres.html">GENRES</a></li>
+                        <li className="menu"> <a href="/">HOME</a></li> |
+                        <li className="menu"> <a href="/">FAVORITES</a></li> |
+                        <li className="menu"> <a href="/">GENRES</a></li>
                     </ul>
                 </nav>
             </article>
