@@ -5,7 +5,7 @@
 
 a:link, a:visited, a:active:hover{
     text-decoration: none;
-    color: white;
+    /*color: white;*/
     font-weight: bold;
     cursor: pointer;
 }

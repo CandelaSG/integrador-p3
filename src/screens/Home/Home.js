@@ -55,14 +55,14 @@ class Home extends Component {
       <React.Fragment>
         <h2>MOVIES</h2>
         <h2>UPCOMING</h2>
-        <CardsContainer info={this.state.upcoming}/>
+        <CardsContainer infoMovies={this.state.upcoming}/>
         <h2>NOW PLAYING</h2>
-        <CardsContainer info={this.state.now_playing}/>
+        <CardsContainer infoMovies={this.state.now_playing}/>
         <h2>SERIES</h2>
         <h2>POPULAR</h2>
-        <CardsContainer info={this.state.popular}/>
+        <CardsContainer infoSeries={this.state.popular}/>
         <h2>TOP RATED</h2>
-        <CardsContainer info={this.state.top_rated}/>
+        <CardsContainer infoSeries={this.state.top_rated}/>
       </React.Fragment>
     ) 
   }
