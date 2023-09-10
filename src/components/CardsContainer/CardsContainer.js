@@ -20,7 +20,7 @@ class CardsContainer extends Component {
                     }
                     })
 
-            : false } {/* <h2>Cargando...</h2> */}
+            : false } 
 
             {this.props.infoSeries ?
                 this.props.infoSeries.map((serie , idx) =>{
@@ -30,7 +30,7 @@ class CardsContainer extends Component {
                      }    
                 })
 
-            : false} {/* <h2>Cargando...</h2> */}
+            : false } 
             </section>
         )
     }

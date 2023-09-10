@@ -8,7 +8,12 @@ const endpointsSeries = ['popular','top_rated'];
 class Home extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      upcoming:[],
+      now_playing:[],
+      popular:[],
+      top_rated:[]
+    };
   }
 
   componentDidMount() {
@@ -57,16 +62,21 @@ class Home extends Component {
           <div className="containerPoster">
             <img className="posterEstreno" src="/img/posterInfinity.png" alt="Poster Infinity"/>
           </div>
+          
         <h2>MOVIES</h2>
         <h3>UPCOMING</h3>
-        <CardsContainer infoMovies={this.state.upcoming}/>
+        {this.state.upcoming.length > 0 ? <CardsContainer infoMovies={this.state.upcoming}/> : <h3>Cargando...</h3> }
+        
         <h3>NOW PLAYING</h3>
-        <CardsContainer infoMovies={this.state.now_playing}/>
+        {this.state.upcoming.length > 0 ? <CardsContainer infoMovies={this.state.now_playing}/> : <h3>Cargando...</h3> }
+        
         <h2>SERIES</h2>
         <h3>POPULAR</h3>
-        <CardsContainer infoSeries={this.state.popular}/>
+        {this.state.upcoming.length > 0 ? <CardsContainer infoSeries={this.state.popular}/> : <h3>Cargando...</h3> }
+        
         <h3>TOP RATED</h3>
-        <CardsContainer infoSeries={this.state.top_rated}/>
+        {this.state.upcoming.length > 0 ? <CardsContainer infoSeries={this.state.top_rated}/> : <h3>Cargando...</h3> }
+        
         </main>
 
     ) 
