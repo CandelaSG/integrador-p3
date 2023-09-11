@@ -21,8 +21,8 @@ function App() {
       <Navbar/>
       <Switch>
         <Route path="/" exact={true} component={Home}/> {/* Tiene que renderizar dos listas, pero terminan en un mismo componente pero Home va pidiendo datos de distintos lados */}
-        <Route path="/verTodos" component={VerTodo}/>
-        <Route path="/favoritos" component={Favorito}/>
+        <Route path="/verTodos/category/:category" component={VerTodo}/>
+        <Route path="/favorites" component={Favorito}/>
         <Route path="/detallePelicula/id/:id" component={DetailMovie}/>
         <Route path="/detalleSeries/id/:id" component={DetailSerie}/>
         <Route path="/resultadoBusqueda" component={ResultadoBusqueda}/>

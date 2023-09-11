@@ -6,7 +6,7 @@ let imagen = 'https://image.tmdb.org/t/p/w500';
 class DetailSerie extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = false
   }
   componentDidMount() {
     let serieId = this.props.match.params.id;
@@ -23,46 +23,51 @@ class DetailSerie extends Component {
   }
 
   render(){
-    {console.log(this.state.serie);}
+    console.log(this.state.serie);
+  
     return (
         <main>
-            {this.state.serie === undefined ? 
-                (<h4>Cargando...</h4>) : 
-                (
-                    <React.Fragment>
-                        <h1 className="tituloDetail detailSeries"> {this.state.serie.name}</h1>
+            {this.state.serie ? 
+                <React.Fragment>
+                <h1 className="tituloDetail detailSeries"> {this.state.serie.name}</h1>
 
-                        <section className="infoContainer infoSeries">
-                            <article className="conteinerPoster">
-                                <img className="posterDetail" src={imagen + this.state.serie.poster_path} alt={this.state.serie.name}/>             
-                            </article>
+                <section className="infoContainer infoSeries">
+                    <article className="conteinerPoster">
+                        <img className="posterDetail" src={imagen + this.state.serie.poster_path} alt={this.state.serie.name}/>             
+                    </article>
 
-                            <article className="infoDetail">
-                                <ul className="listaDetail">
-                                    <li><strong className="decoracion">Release date: </strong> {this.state.serie.first_air_date}</li>
-                                    <li><strong className="decoracion">Genres: </strong></li>
-                                    <li><strong className="decoracion">Episode running time:</strong>  {this.state.serie.episode_run_time} minutes</li>
-                                    <li><strong className="decoracion">Qualification:</strong> {this.state.serie.vote_average} <i className="fa-solid fa-star"></i></li> 
-                                </ul> 
-                            
-                            
-                                <p className="sinopsis">{this.state.serie.overview}</p>   
-                                {/* <div className="buttonTrailer">
-                                    <a className="verTrailer" href="/"> ▶️ Ver Trailer </a> 
-                                </div> */}
-                            </article>
+                    <article className="infoDetail">
+                        <ul className="listaDetail">
+                            <li><strong className="decoracion">Release date: </strong> {this.state.serie.first_air_date}</li>
+                            <li><strong className="decoracion">Genres:</strong> 
+                            <ul>
+                              {this.state.serie.genres.map((genre,idx)=> <li>{genre.name}</li>)}
+                            </ul>
+                              </li>
+                            <li><strong className="decoracion">Number of episodes:</strong>  {this.state.serie.number_of_episodes}</li>
+                            <li><strong className="decoracion">Qualification:</strong> {this.state.serie.vote_average} <i className="fa-solid fa-star"></i></li> 
+                        </ul> 
+                    
+                    
+                        <p className="sinopsis">{this.state.serie.overview}</p>   
+                        {/* <div className="buttonTrailer">
+                            <a className="verTrailer" href="/"> ▶️ Ver Trailer </a> 
+                        </div> */}
+                    </article>
 
-                        </section>
-                        
-                        <section className="seccionFav">            
-                            <article className="artFav">
-                                <a className="buttonFav clave" href=""> 🤍 Favorites</a>
-                            </article>
-                        </section>
+                </section>
+                
+                <section className="seccionFav">            
+                    <article className="artFav">
+                        <a className="buttonFav clave" href=""> 🤍 Favorites</a>
+                    </article>
+                </section>
 
-                    </React.Fragment>
-            
-            )}
+            </React.Fragment>
+                :
+                <h4>Cargando...</h4>
+                }
+
         </main>
       )
   }

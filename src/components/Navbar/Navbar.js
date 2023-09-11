@@ -14,9 +14,16 @@ function Navbar(){
             <article className="containerMenu">
                 <nav>
                     <ul>
-                        <li className="menu"> <a href="/">HOME</a></li> |
-                        <li className="menu"> <a href="/">FAVORITES</a></li> |
-                        <li className="menu"> <a href="/">GENRES</a></li>
+                        <li className="menu"> <Link to={`/`}>HOME</Link></li> |
+                        <li className="menu">  <Link to={`/favorites`}>FAVORITES</Link></li> 
+                        
+                    </ul>
+                    <ul>
+                        <li className="menu"> <Link to={`/verTodos/category/upcoming`}>UPCOMING</Link></li> |
+                        <li className="menu"> <Link to={`/verTodos/category/now_playing`}>NOW PLAYING</Link></li> |
+                        <li className="menu"> <Link to={`/verTodos/category/popular`}>POPULAR</Link></li> |
+                        <li className="menu"> <Link to={`/verTodos/category/top_rated`}>TOP RATED</Link></li> 
+                        
                     </ul>
                 </nav>
             </article>
