@@ -1,6 +1,7 @@
 import React from 'react';
 import './Navbar.css'
 import { Link } from "react-router-dom";
+import Buscador from '../Buscador/Buscador';
 
 function Navbar(){
 
@@ -28,12 +29,8 @@ function Navbar(){
                 </nav>
             </article>
 
-            {/* BUSCADOR */} 
             <article>
-                <form action="./search-results.html" method="GET" className="buscadorContainer">
-                    <input className="buscador" type="text" name="busqueda" value="" placeholder="  Search movies, series..." />
-                    <button type="submit" value="enviar" className="lupa" href="search-results.html"><i className="fa-solid fa-magnifying-glass"></i></button>
-                </form>
+               <Buscador/>
             </article>
         </header>
     )
