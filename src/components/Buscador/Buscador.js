@@ -1,23 +1,39 @@
-import React from "react";
+import React, {Component} from "react";
 
-function Buscador() {
-  return (
-    <form
-      action="/search-results"
-      method="GET"
-      className="buscadorContainer"
-    >
-      <input
-        className="buscador"
-        type="text"
-        name="busqueda"
-        placeholder="  Search movies, series..."
-      />
-      <button type="submit" className="lupa">
-        <i className="fa-solid fa-magnifying-glass"></i>
-      </button>
-    </form>
-  );
-}
+class Buscador extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            valorInput:""
+        }
+    };
+   
+  detenerDefault(evento) {
+    evento.preventDefault();
+  }
 
-export default Buscador;
+  guardarInput(evento) {
+    this.setState(
+      {
+        valorInput: evento.target.value,
+      },
+      () => this.props.filtro(this.state.valorInput)
+    );
+  }
+
+  render() {
+    return (
+      <form onSubmit={(evento) => this.detenerDefault(evento)}>
+        <input
+          type="text" 
+          onSubmit={(evento) => this.guardarInput(evento)}
+          value={this.state.valorInput}
+          className="buscador"
+          name="busqueda"
+          placeholder="  Search movies, series..."
+        />
+      </form>
+    );
+  }}
+
+export default Buscador 

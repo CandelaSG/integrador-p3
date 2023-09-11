@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './VerTodo.css'
 import CardsContainer from "../../components/CardsContainer/CardsContainer"
+import Buscador from "../../components/Buscador/Buscador";
 
 /* const endpointsMovies = ['upcoming','now_playing'];
 const endpointsSeries = ['popular','top_rated']; */
@@ -40,11 +41,21 @@ class VerTodo extends Component {
     }
   }
 
+  filtrarContenido(textoInput) {
+    let contenidoFiltrados = this.state.contenido.filter((contenido) => {
+      return contenido.name.toLowerCase().includes(textoInput.toLowerCase());
+    });
+    this.setState({
+      contenido: contenidoFiltrados,
+    });
+  }
+
   render() {
     console.log(this.state.movieVerTodo);
     console.log(this.state.serieVerTodo);
     return(
       <React.Fragment>
+        <Buscador filtro={(texto) => this.filtrarContenido(texto)} />
         <h3>VER TODO:</h3>
         {this.state.movieVerTodo.length > 0  || this.state.serieVerTodo.length > 0 ? 
           (this.state.movieVerTodo.length > 0 ? 
