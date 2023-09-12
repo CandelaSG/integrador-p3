@@ -1,0 +1,14 @@
+/* HIJOS */
+.pelicula{
+    justify-content: center;
+    padding-left:0.5vw;
+    padding-right: 0.5vw;
+    width: 15vw;
+    margin-bottom: 5vh;
+}
+
+.nombre{
+    display: block;
+    text-align: center;
+    color: white;
+}

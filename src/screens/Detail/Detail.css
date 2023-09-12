@@ -1,0 +1,137 @@
+/* DETALLES SERIES Y PELICULAS */
+/* INFO */
+.tituloDetail{
+    text-align: center;
+    text-shadow: 0px 2px 15px rgb(173, 124, 180);
+    margin-top: 1vw;
+    margin-left: 1.5vw;
+    color: aliceblue;
+    font-family: 'Outfit';
+    font-weight: bold;
+
+}
+
+.infoContainer{
+    display: flex;
+    align-items: center; 
+    background-color: #16032fa2;
+    min-height: 60vh;
+    width: 68vw;
+    margin-left:17.5vw;
+}
+
+.conteinerPoster{
+    flex-direction: column;
+}
+.posterDetail{
+    width:16vw;
+    height:43vh; 
+    padding-left: 1.5vw;
+}
+.trailer{
+    width:38vw;
+    height:35vh;   
+}
+.infoDetail{
+    padding-left: 3vw;
+    color: white;
+    width: 45vw;
+    margin-top: 15px;
+}
+
+.listaDetail{
+    list-style-type: none;
+    padding-left: 0px;
+    margin-bottom: 4vh;
+}
+
+.decoracion{
+    color:#985390;
+}
+
+.seccionFav{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 0 0 0 17.5vw;
+    background-color: #16032fa2;
+    padding-left: 1.5vw;
+    width: 65vw;
+    height: 3vw;
+}
+.artFav{
+    margin-left: 2.7vw;
+}
+.buttonFav{
+    background-color: black;
+    padding: 13px;
+    border-radius: 15px;
+    justify-content: flex-end;
+}
+.sinopsis{
+    text-align: justify;
+}
+
+.providers{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content:space-around;
+    width: 65vw;
+    margin-left: 17.5vw;
+    padding: 1.5vw;
+    margin-top: 1vw;
+    margin-bottom: 1vh;
+
+}
+.imgProv{
+    border-radius: 18px;
+    width: 5vw;
+}
+.buttonTrailer{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 4vh;
+    align-items: center; 
+}
+.verTrailer{
+    text-shadow: 0px 2px 15px rgb(100, 70, 104);
+    text-align: center;
+    font-weight: bold;
+    
+}
+.recomendaciones{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    margin-bottom: 15vw;
+    height: 25vh;
+    width: 100vw;
+    justify-content:space-around;
+}
+.botonRecSeries{
+    background-color:rgba(0, 0, 0, 0.252);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 1vw;
+    border: 1px solid #d0d0d0;
+    margin: 1vw;
+}
+.containerButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botonRec{
+    background-color:rgba(0, 0, 0, 0.252);
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    padding: 1vw;
+    border: 1px solid #d0d0d0;
+    margin: 1vw;
+}

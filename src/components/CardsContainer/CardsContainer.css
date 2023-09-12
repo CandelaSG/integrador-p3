@@ -1,0 +1,10 @@
+/* CONTENEDOR PADRE */
+.containerCards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 10vw;
+    width: 100vw;
+    justify-content:space-around;
+}
+

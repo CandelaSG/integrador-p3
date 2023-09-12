@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CardMovie from '../Card/CardMovie';
 import CardSerie from '../Card/CardSerie';
+import './CardsContainer.css';
 class CardsContainer extends Component {
     constructor(props) {
         super(props);
@@ -10,7 +11,7 @@ class CardsContainer extends Component {
     render(){
     
         return(
-            <section className='containerHome peliculasPopulares'>
+            <section className='containerCards'>
                 
                 {this.props.infoMovies ?
                 this.props.infoMovies.map((pelicula , idx) =>{
@@ -20,31 +21,31 @@ class CardsContainer extends Component {
                     }
                     })
 
-            : false } 
+                : false } 
 
-            {this.props.infoSeries ?
-                this.props.infoSeries.map((serie , idx) =>{
-                    if (idx < 6) {
-                        return (<CardSerie  key={serie.name + idx}  contentSerie={serie}/>
+                {this.props.infoSeries ?
+                    this.props.infoSeries.map((serie , idx) =>{
+                        if (idx < 6) {
+                            return (<CardSerie  key={serie.name + idx}  contentSerie={serie}/>
+                            )
+                        }    
+                    })
+
+                : false } 
+
+                {this.props.verMasMovies ?
+                    this.props.verMasMovies.map((pelicula , idx) =>
+                        <CardMovie key={pelicula.title + idx} contentMovie={pelicula} />
                         )
-                     }    
-                })
 
-            : false } 
+                : false } 
 
-            {this.props.verMasMovies ?
-                this.props.verMasMovies.map((pelicula , idx) =>
-                    <CardMovie key={pelicula.title + idx} contentMovie={pelicula} />
+                {this.props.verMasSeries ?
+                    this.props.verMasSeries.map((serie , idx) =>
+                        <CardSerie  key={serie.name + idx}  contentSerie={serie}/>       
                     )
-
-            : false } 
-
-            {this.props.verMasSeries ?
-                this.props.verMasSeries.map((serie , idx) =>
-                    <CardSerie  key={serie.name + idx}  contentSerie={serie}/>       
-                )
-                
-            : false } 
+                    
+                : false } 
             </section>
         )
     }

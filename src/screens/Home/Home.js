@@ -54,28 +54,52 @@ class Home extends Component {
   }
 
   render() {
-    console.log(this.state.now_playing);
 
     return(
         <main>
-          <div className="containerPoster">
+          {/* <div className="containerPoster">
             <img className="posterEstreno" src="/img/posterInfinity.png" alt="Poster Infinity"/>
+          </div> */}
+          <div className="categoria">
+            <h2 className="tituloResult">MOVIES</h2>
+              <div className="titulosHome">
+                <h3 className="titulo">UPCOMING</h3> 
+                <Link to={`/upcoming`}><p className="titulo"> <u>More titles</u></p></Link>
+              </div>
+              {this.state.upcoming.length > 0 ? <CardsContainer infoMovies={this.state.upcoming}/> : <h3>Cargando...</h3> }
+          </div>
+
+          <div className="categoria">
+            <div className="titulosHome">
+              <h3 className="titulo">NOW PLAYING</h3> 
+              <Link to={`/now_playing`}><p className="titulo"> <u>More titles</u></p></Link>
+            </div>
+
+            {this.state.now_playing.length > 0 ? <CardsContainer infoMovies={this.state.now_playing}/> : <h3>Cargando...</h3> }
+            
           </div>
           
-        <h2>MOVIES</h2>
-        <h3>UPCOMING</h3> <Link to={`/upcoming`}><p> WATCH ALL IN: UPCOMING </p></Link>
-        {this.state.upcoming.length > 0 ? <CardsContainer infoMovies={this.state.upcoming}/> : <h3>Cargando...</h3> }
-        
-        <h3>NOW PLAYING</h3> <Link to={`/now_playing`}><p>   WATCH ALL IN: NOW PLAYING</p></Link>
-        {this.state.now_playing.length > 0 ? <CardsContainer infoMovies={this.state.now_playing}/> : <h3>Cargando...</h3> }
-        
-        <h2>SERIES</h2>
-        <h3>POPULAR</h3>  <Link to={`/popular`}><p>   WATCH ALL IN: POPULAR</p></Link>
-        {this.state.popular.length > 0 ? <CardsContainer infoSeries={this.state.popular}/> : <h3>Cargando...</h3> }
-        
-        <h3>TOP RATED</h3> <Link to={`/top_rated`}><p>   WATCH ALL IN: TOP RATED</p></Link>
-        {this.state.top_rated.length > 0 ? <CardsContainer infoSeries={this.state.top_rated}/> : <h3>Cargando...</h3> }
-        
+          <h2 className="tituloResult">SERIES</h2>
+
+          <div className="categoria">
+            <div className="titulosHome">
+              <h3 className="titulo">POPULAR</h3> 
+              <Link to={`/popular`}><p className="titulo"> <u>More titles</u></p></Link>
+            </div>
+          
+            {this.state.popular.length > 0 ? <CardsContainer infoSeries={this.state.popular}/> : <h3>Cargando...</h3> }
+
+          </div>
+
+          <div className="categoria">
+            <div className="titulosHome">
+              <h3 className="titulo">TOP RATED</h3> 
+              <Link to={`/top_rated`}><p className="titulo"> <u>More titles</u></p></Link>
+            </div>
+          
+            {this.state.top_rated.length > 0 ? <CardsContainer infoSeries={this.state.top_rated}/> : <h3>Cargando...</h3> }
+          
+          </div>
         </main>
 
     ) 

@@ -9,21 +9,15 @@ a:link, a:visited, a:active:hover{
     font-weight: bold;
     cursor: pointer;
 }
-main{
-    /* background-color: #22014d; */
-    background-image: url(/img/background.png);
-    background-repeat:repeat;
-    background-size:contain;
-    font-family:Arial, Helvetica, sans-serif;
-}
-/* body{
+
+.bodyBackground{
     background-color: #22014d;
-    background-image: url(./imgCss/background.png);
+    background-image: url(/img/background.png);
     background-repeat: repeat;
     background-size: contain;
     margin: 0;
     font-family:Arial, Helvetica, sans-serif;
-} */
+}
 
 h1{
     margin-left: 3vw;
@@ -43,19 +37,6 @@ h2{
 h3 {
     font-family: "Outfit";
     font-size: medium;
-}
-
-/* LOGO */
-.logo{
-    height: 7vh;
-}
-
-/* MENÚ BÚSQUEDA */
-
-.menu{
-    display: inline;
-    text-decoration: none;
-    align-items: center;
 }
 
 /* BUSCADOR */
@@ -95,158 +76,12 @@ h3 {
     
     
 }
-.containerMenu{
-    margin-left: 10vw;
-}
+
 
 /* HOME */
 /* PELICULAS Y SERIES */
 
-/* DETALLES SERIES Y PELICULAS */
-/* INFO */
-.tituloDetail{
-    text-align: center;
-    text-shadow: 0px 2px 15px rgb(173, 124, 180);
-    margin-top: 1vw;
-    margin-left: 1.5vw;
-    color: aliceblue;
-    font-family: 'Outfit';
-    font-weight: bold;
 
-}
-.genreSeries{
-    height: 90vh;
-    width: 85vw;
-    margin-left: 8vw;
-}
-.genreMovies{
-    height: 90vh;
-    width: 85vw;
-    margin-left: 8vw;
-}
-.infoContainer{
-    display: flex;
-    align-items: center; 
-    background-color: #16032fa2;
-    height: 50vh;
-    width: 65vw;
-    margin-left:17.5vw;
-}
-
-.conteinerPoster{
-    flex-direction: column;
-}
-.posterDetail{
-    width:16vw;
-    height:43vh; 
-    padding-left: 1.5vw;
-}
-.trailer{
-    width:38vw;
-    height:35vh;   
-}
-.infoDetail{
-    padding-left: 3vw;
-    color: white;
-    width: 45vw;
-}
-
-.listaDetail{
-    list-style-type: none;
-    padding-left: 0px;
-    margin-bottom: 4vh;
-}
-
-.decoracion{
-    color:#985390;
-}
-
-.seccionFav{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: flex-start;
-    margin: 0 0 0 17.5vw;
-    background-color: #16032fa2;
-    padding-left: 1.5vw;
-    width: 65vw;
-    height: 3vw;
-}
-.artFav{
-    margin-left: 2.7vw;
-}
-.buttonFav{
-    background-color: black;
-    padding: 13px;
-    border-radius: 15px;
-    justify-content: flex-end;
-}
-.sinopsis{
-    text-align: justify;
-}
-
-.providers{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content:space-around;
-    width: 65vw;
-    margin-left: 17.5vw;
-    padding: 1.5vw;
-    margin-top: 1vw;
-    margin-bottom: 1vh;
-
-}
-.imgProv{
-    border-radius: 18px;
-    width: 5vw;
-}
-.buttonTrailer{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 4vh;
-    align-items: center; 
-}
-.verTrailer{
-    text-shadow: 0px 2px 15px rgb(100, 70, 104);
-    text-align: center;
-    font-weight: bold;
-    
-}
-.recomendaciones{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    margin-bottom: 15vw;
-    height: 25vh;
-    width: 100vw;
-    justify-content:space-around;
-}
-.botonRecSeries{
-    background-color:rgba(0, 0, 0, 0.252);
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: white;
-    padding: 1vw;
-    border: 1px solid #d0d0d0;
-    margin: 1vw;
-}
-.containerButton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.botonRec{
-    background-color:rgba(0, 0, 0, 0.252);
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: white;
-    padding: 1vw;
-    border: 1px solid #d0d0d0;
-    margin: 1vw;
-}
 /* FAVORITOS */
 .tituloFav{
     margin:0 ;
@@ -334,89 +169,6 @@ h3 {
     height: 30vw;
     margin: 4vw;
 }
-/*PÁGINAS RELACIONADAS*/
-.relacionadasContainer{
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.relacionadas{
-    display: flex;
-    flex-direction:column;
-    background-color:rgba(0, 0, 0, 0.297);
-    width:35vw;
-    height: 4vw;
-    align-items: center;
-    justify-content: center;
-}
-
-/* GÉNEROS */
-.containerGenresMovies{    
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-}
-.containerGenresSeries{    
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
-}
-.genresBox{
-    background-color:rgba(0, 0, 0, 0.297);
-    padding: 1.5vw;
-    margin: 1vw;
-    width: 20vw;
-    text-align: center;
-    font-size: 1.5vw;
-    border-radius: 2vw;
-    
-}
-
-.titleGenre{
-    margin-top: 0.5vw;
-    margin-left: 2vw;
-}
-
-/* FOOTER */
-.containerFooter{
-    background-color:#16032fa2;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content:space-around;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 2.5vh;
-    padding-bottom: 2.5vh;
-}
-
-.imgFooter {
-    flex-direction: column;
-    align-items: center;
-    width: 200px;
-    justify-self: center; 
-}
-
-.imgApi {
-    flex-direction: row;
-    justify-self: flex-end;
-    width: 5vw;
-}
-
-.nombresFooter{
-    color: rgba(95, 87, 87, 0.692);
-    font-size: 10px;
-}
-
 
 /* LOADER */
 *{
@@ -503,134 +255,4 @@ h3 {
 
 .loader2 {
     clip-path: circle(0% at 100% 100%);
-}
-
-@media (max-width: 768px) {
-
-/* BUSCADOR */
-    
-    .buscar{
-        width: 126px;
-        height: 20px;
-        font-size: 10px;
-    }
-
-    .lupa{
-        top: 16px;
-        right: 10px;
-        width: 3.5vw;
-        height: 4vh;
-        border-radius: 50%;
-    }
-
-/* HOME */
-    .containerHome{
-        margin-bottom: 2.5vw;
-        flex-wrap: nowrap;
-    }
-    .slider-area {
-        padding: 140px 0;
-        width: 80vw;
-        height: 50vh;
-    }
-    .poster{
-        height: 23vh;
-        width: 15vw;
-    }
-    .nombre{
-        display: none;
-    }
-    .año{
-        display: none;
-    }
-/* FAVORITOS */
-    .posterVerMas{
-        height: 23vh;
-        width: 14vw;
-    }
-/* DETALLE SERIES Y PELÍCULAS */
-    .infoContainer{
-        margin: 2vw 0 3vw 0;
-    }
-    .trailer{
-        width:45vw;
-        height:35vh;   
-    }
-    
-    .infoDetail{
-        font-size: 11.5px;
-    }
-
-    .buttonFav{
-        padding: 10px;
-        border-radius: 15px;
-    }
-/* ELENCO */
-    .castFotos{
-        margin-bottom: 2vw;
-    }   
-
-    .elenco{
-        width: 180px;
-        height: 230px;
-        font-size: 12px;
-    }
-/* DETALLES GÉNEROS */
-    .sitcomImg{
-        margin-bottom: 15px;
-    }
-/* SEARCH RESULTS */
-    .resultText{
-        font-size: 10px;
-        font-weight: lighter;
-    }
-    .containerResults{
-        width: 75vw;
-        height: 40vw;
-        margin: 0 13vw 0 13vw;
-    }
-
-    .peliSearch{
-        margin-left: 3vw;
-        margin-right: 3vw;
-    }
-
-    .tituloSearch{
-        font-size:20px;
-    }
-
-    .infoSearch{
-        width: 13vw;
-        font-size: 13px;
-    }
-
-    .h3Search{
-        font-size: 13px;
-    }
-    .imgSearch{
-        width:315px; 
-        height:150px;
-    }
-
-    .favoritosSearch{
-        display: none;
-    }
-}
-@media (hover: hover){
-    .pelicula:hover{
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
-    }
-    .genresBox:hover {
-        color: white;
-        box-shadow: 0px 2px 15px rgb(173, 124, 180);
-    }
-    .botonRecSeries:hover {
-        background-color: rgba(100, 100, 100, 0.521);
-        box-shadow: 0px 2px 15px rgb(173, 124, 180);
-    }
-    .botonRec:hover {
-        background-color: rgba(100, 100, 100, 0.521);
-        box-shadow: 0px 2px 15px rgb(173, 124, 180);
-    }
 }

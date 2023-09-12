@@ -1,0 +1,129 @@
+@media (max-width: 768px) {
+
+    /* BUSCADOR */
+        
+        .buscar{
+            width: 126px;
+            height: 20px;
+            font-size: 10px;
+        }
+    
+        .lupa{
+            top: 16px;
+            right: 10px;
+            width: 3.5vw;
+            height: 4vh;
+            border-radius: 50%;
+        }
+    
+    /* HOME */
+        .containerHome{
+            margin-bottom: 2.5vw;
+            flex-wrap: nowrap;
+        }
+        .slider-area {
+            padding: 140px 0;
+            width: 80vw;
+            height: 50vh;
+        }
+        .poster{
+            height: 23vh;
+            width: 15vw;
+        }
+        .nombre{
+            display: none;
+        }
+        .año{
+            display: none;
+        }
+    /* FAVORITOS */
+        .posterVerMas{
+            height: 23vh;
+            width: 14vw;
+        }
+    /* DETALLE SERIES Y PELÍCULAS */
+        .infoContainer{
+            margin: 2vw 0 3vw 0;
+        }
+        .trailer{
+            width:45vw;
+            height:35vh;   
+        }
+        
+        .infoDetail{
+            font-size: 11.5px;
+        }
+    
+        .buttonFav{
+            padding: 10px;
+            border-radius: 15px;
+        }
+    /* ELENCO */
+        .castFotos{
+            margin-bottom: 2vw;
+        }   
+    
+        .elenco{
+            width: 180px;
+            height: 230px;
+            font-size: 12px;
+        }
+    /* DETALLES GÉNEROS */
+        .sitcomImg{
+            margin-bottom: 15px;
+        }
+    /* SEARCH RESULTS */
+        .resultText{
+            font-size: 10px;
+            font-weight: lighter;
+        }
+        .containerResults{
+            width: 75vw;
+            height: 40vw;
+            margin: 0 13vw 0 13vw;
+        }
+    
+        .peliSearch{
+            margin-left: 3vw;
+            margin-right: 3vw;
+        }
+    
+        .tituloSearch{
+            font-size:20px;
+        }
+    
+        .infoSearch{
+            width: 13vw;
+            font-size: 13px;
+        }
+    
+        .h3Search{
+            font-size: 13px;
+        }
+        .imgSearch{
+            width:315px; 
+            height:150px;
+        }
+    
+        .favoritosSearch{
+            display: none;
+        }
+    }
+    @media (hover: hover){
+        .pelicula:hover{
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
+        }
+        .genresBox:hover {
+            color: white;
+            box-shadow: 0px 2px 15px rgb(173, 124, 180);
+        }
+        .botonRecSeries:hover {
+            background-color: rgba(100, 100, 100, 0.521);
+            box-shadow: 0px 2px 15px rgb(173, 124, 180);
+        }
+        .botonRec:hover {
+            background-color: rgba(100, 100, 100, 0.521);
+            box-shadow: 0px 2px 15px rgb(173, 124, 180);
+        }
+    }

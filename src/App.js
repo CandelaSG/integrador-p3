@@ -13,7 +13,7 @@ import DetailSerie from "./screens/Detail/DetailSerie";
 import Notfound from "./screens/NotFound/NotFound";
 
 
-import { Link, Route, Switch} from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
     <React.Fragment>
       <Navbar/>
       <Switch>
-        <Route path="/" exact={true} component={Home}/> {/* Tiene que renderizar dos listas, pero terminan en un mismo componente pero Home va pidiendo datos de distintos lados */}
+        <Route path="/" exact={true} component={Home}/>
         <Route path="/now_playing" component={VerTodoNowPlaying}/>
         <Route path="/upcoming" component={VerTodoUpcoming}/>
         <Route path="/top_rated" component={VerTodoTopRated}/>

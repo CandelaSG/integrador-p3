@@ -6,7 +6,7 @@ h1{
 }
 
 h2{
-    margin: 1vw 0 0 3VW;
+    margin-left: 3VW;
     color: aliceblue;
     font-family:"Outfit";
     font-weight: bolder;
@@ -21,6 +21,27 @@ h3 {
     font-size: 2vw;
 }
 
+.tituloResult{
+    margin-left: 0vw;
+    color: aliceblue;
+    font-family: 'Outfit';
+    font-size: 2vw;
+    font-weight: bold;
+    background-color:rgba(0, 0, 0, 0.252) ;
+    padding: 1vw 1vw 1vw 2vw;
+    
+}
+.titulosHome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.titulo{
+    margin-right: 15px;
+}
+u{
+    color: rgb(187, 141, 233);
+}
 /* POSTER */
 .containerPoster{
     display: flex;
@@ -31,39 +52,6 @@ h3 {
 .posterEstreno{
     width: 100vw
 }
-
-/* CONTENEDOR PADRE */
-.containerHome{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-bottom: 10vw;
-    height: 25vh;
-    width: 100vw;
-    justify-content:space-around;
-}
-
-/* HIJOS */
-.pelicula{
-    justify-content: center;
-    padding-left:0.5vw;
-    padding-right: 0.5vw;
-    width: 13vw;
-}
-
-.poster{
-    height: 34vh;
-    width: 13vw;
-}
-
-.nombre{
-    display: block;
-    text-align: center;
-    color: white;
-}
-
-.año{
-    display: block;
-    text-align: center;
-    color:rgb(144, 132, 132);
+.categoria{
+    height: 65vh;
 }
