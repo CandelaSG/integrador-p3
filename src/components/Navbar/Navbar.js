@@ -19,10 +19,10 @@ function Navbar(){
                         
                     </ul>
                     <ul>
-                        <li className="menu"> <Link to={`/verTodos/category/upcoming`}>UPCOMING</Link></li> |
-                        <li className="menu"> <Link to={`/verTodos/category/now_playing`}>NOW PLAYING</Link></li> |
-                        <li className="menu"> <Link to={`/verTodos/category/popular`}>POPULAR</Link></li> |
-                        <li className="menu"> <Link to={`/verTodos/category/top_rated`}>TOP RATED</Link></li> 
+                        <li className="menu"> <Link to={`/upcoming`}>UPCOMING</Link></li> |
+                        <li className="menu"> <Link to={`/now_playing`}>NOW PLAYING</Link></li> |
+                        <li className="menu"> <Link to={`/popular`}>POPULAR</Link></li> |
+                        <li className="menu"> <Link to={`/top_rated`}>TOP RATED</Link></li> 
                         
                     </ul>
                 </nav>
