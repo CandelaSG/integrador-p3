@@ -4,15 +4,10 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Home from "./screens/Home/Home";
 import Favorito from "./screens/Favorito/Favorito";
-<<<<<<< HEAD
 import VerTodoUpcoming from "./screens/VerTodo/VerTodoUpcoming";
 import VerTodoNowPlaying from "./screens/VerTodo/VerTodoNowPlaying"
 import VerTodoPopular from "./screens/VerTodo/VerTodoPopular";
 import VerTodoTopRated from "./screens/VerTodo/VerTodoTopRated";
-import ResultadoBusqueda from "./screens/ResultadoBusqueda/ResultadoBusqueda";
-=======
-import VerTodo from "./screens/VerTodo/VerTodo";
->>>>>>> 70dc9b45cb18d8e22f820a441ea9b14b31c32ddf
 import DetailMovie from "./screens/Detail/DetailMovie";
 import DetailSerie from "./screens/Detail/DetailSerie";
 import Notfound from "./screens/NotFound/NotFound";
