@@ -9,7 +9,9 @@ class CardSerie extends Component {
         super(props);
         this.state = {
             textoFavoritos: 'Agregar a favs 💜',
-            favoritos: []
+            favoritos: [],
+            masInfo: "SHOW INFO",
+            botonInfo: <i className= "fa-solid fa-circle-info botonInfo"></i>
         }
     };
     componentDidMount (){
@@ -29,7 +31,17 @@ class CardSerie extends Component {
             
         }
     }
-
+    metodoVerMas(){
+        if(this.state.masInfo === 'SHOW INFO'){
+            this.setState({
+                masInfo: 'HIDE INFO'
+            })
+        } else{
+            this.setState({
+                masInfo: 'SHOW INFO'
+            })
+        }
+    }
     modificarFavoritos(id){
 
         let arrayFavoritos = []
@@ -65,7 +77,7 @@ class CardSerie extends Component {
     }
 
     render(){
-        
+        console.log(this.state.masInfo);
         return (
             <article className='pelicula'>
                 {/* {console.log(this.props.contentSerie.name)} */}
@@ -75,12 +87,20 @@ class CardSerie extends Component {
                 <Link to={`/detalleSeries/id/${this.props.contentSerie.id}`}>
                 {this.props.contentSerie.name}
                 </Link>
-               {/*  <Link to={`/detalleSeries/id/${this.props.contentSerie.id}`}>
-                {this.props.contentSerie.overview}
-                </Link> */}
 
+               <a onClick={() => this.metodoVerMas()}> {this.state.botonInfo}</a>
+        
                 <br/>
                 <button onClick={()=> this.modificarFavoritos(this.props.contentSerie.id)} type='button'> {this.state.textoFavoritos} </button>
+              
+              {this.state.masInfo === "SHOW INFO" ?  false : <p>{this.props.contentSerie.overview}</p>}
+                
+                
+
+                {/* {this.state.masInfo === 'Ver mas' ?  false : <p>{this.props.contentSerie.overview}</p>}
+                <a onClick={() => this.metodoVerMas()}>{this.state.masInfo}</a> */}
+
+                
             </article>
             
         )

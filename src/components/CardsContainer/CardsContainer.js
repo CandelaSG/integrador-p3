@@ -9,7 +9,7 @@ class CardsContainer extends Component {
     };
 
     render(){
-    
+    console.log(this.props.infoMovies);
         return(
             <section className='containerCards'>
                 

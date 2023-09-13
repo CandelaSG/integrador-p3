@@ -79,6 +79,13 @@ h3 {
 
 
 /* HOME */
+.botonInfo{
+    color: #f180e1;
+}
+
+.pelicula{
+    color: white;
+}
 /* PELICULAS Y SERIES */
 
 
@@ -162,6 +169,7 @@ h3 {
     text-align: center;
     margin: 0.5vw;
     width: 15vw;
+    flex-wrap: wrap;
 }
 
 .errorSearch{

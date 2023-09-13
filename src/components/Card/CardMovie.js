@@ -8,7 +8,9 @@ class Card extends Component {
         super(props);
         this.state = {
             textoFavoritos: 'Agregar a favs 💜',
-            favoritos: []
+            favoritos: [],
+            masInfo: "SHOW INFO",
+            botonInfo: <i className= "fa-solid fa-circle-info botonInfo"></i>
         }
     };
     componentDidMount (){
@@ -26,6 +28,18 @@ class Card extends Component {
                 })
             }
             
+        }
+    }
+    metodoVerMas(){
+        if(this.state.masInfo === 'SHOW INFO'){
+            this.setState({
+                masInfo: 'HIDE INFO',
+            })
+        } else{
+            this.setState({
+                masInfo: 'SHOW INFO',
+
+            })
         }
     }
     modificarFavoritos(id){
@@ -77,11 +91,12 @@ class Card extends Component {
                 <Link to={`/detallePelicula/id/${this.props.contentMovie.id}`}>
                 {this.props.contentMovie.title} 
                 </Link>
-                {/* <Link to={`/detallePelicula/id/${this.props.contentMovie.id}`}>
-                {this.props.contentMovie.overview} 
-                </a> */}
+
+                 <a onClick={() => this.metodoVerMas()}> {this.state.botonInfo}</a>
                 <br/>
-                <button Y  onClick={()=> this.modificarFavoritos(this.props.contentMovie.id)} type='button'> {this.state.textoFavoritos} </button>
+                <button  onClick={()=> this.modificarFavoritos(this.props.contentMovie.id)} type='button'> {this.state.textoFavoritos} </button>
+
+                {this.state.masInfo === "SHOW INFO" ?  false : <p>{this.props.contentMovie.overview}</p>}
             </article>
             
         )
