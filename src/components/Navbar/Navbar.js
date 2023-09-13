@@ -15,10 +15,7 @@ function Navbar(){
                 <nav >
                     <ul className=""> {/* containerMenu containerCategorias */}
                         <li className="menu"> <Link to={`/upcoming`}>UPCOMING  </Link></li>   |
-                        <li className="menu"> <Link to={`/now_playing`}>  NOW PLAYING  </Link></li>     |
-                        <li className="menu"> <Link to={`/popular`}>  POPULAR  </Link></li>     |
-                        <li className="menu"> <Link to={`/top_rated`}>  TOP RATED  </Link></li> 
-                        
+                        <li className="menu"> <Link to={`/popular`}>  POPULAR  </Link></li>     
                     </ul>
                 </nav>
             </article>

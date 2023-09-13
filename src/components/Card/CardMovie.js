@@ -81,7 +81,7 @@ class Card extends Component {
                 {this.props.contentMovie.overview} 
                 </a> */}
                 <br/>
-                <button onClick={()=> this.modificarFavoritos(this.props.contentMovie.id)} type='button'> {this.state.textoFavoritos} </button>
+                <button Y  onClick={()=> this.modificarFavoritos(this.props.contentMovie.id)} type='button'> {this.state.textoFavoritos} </button>
             </article>
             
         )
