@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './Detail.css'
+import Loader from "../../components/Loader/Loader"
 
 let imagen = 'https://image.tmdb.org/t/p/w500';
 
@@ -75,7 +76,7 @@ class DetailSerie extends Component {
     console.log(this.state.serie);
   
     return (
-        <main>
+        <main className="detailContainer">
             {this.state.serie ? 
                 <React.Fragment>
                 <h1 className="tituloDetail detailSeries"> {this.state.serie.name}</h1>
@@ -116,7 +117,7 @@ class DetailSerie extends Component {
 
             </React.Fragment>
                 :
-                <h4>Cargando...</h4>
+                <Loader/>
                 }
 
         </main>

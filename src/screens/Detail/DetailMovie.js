@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import './Detail.css'
+import './Detail.css';
+import Loader from "../../components/Loader/Loader"
 
 let imagen = 'https://image.tmdb.org/t/p/w500';
 
@@ -75,7 +76,7 @@ class DetailMovie extends Component {
   render() {
     console.log(this.state.movie)
     return (
-        <main>
+        <main className = "detailContainer">
             {this.state.movie ? 
                 ( <React.Fragment>
                   <h1 className="tituloDetail detailSeries"> {this.state.movie.title}</h1>
@@ -115,7 +116,7 @@ class DetailMovie extends Component {
                   
 
               </React.Fragment>) : 
-            (<h4>Cargando...</h4>)}
+            (<Loader/>)}
         </main>
       )
   }

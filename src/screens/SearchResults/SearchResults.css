@@ -1,0 +1,47 @@
+.resultText{
+    font-weight: bold;
+    font-size: 1.5vw;
+    padding-left: 50px;
+    color: white;
+    width: 560px;
+    font-family: "Outfit";
+    margin-top: 2vw;
+}
+.tituloResult{
+    margin-left: 0vw;
+    color: aliceblue;
+    font-family: 'Outfit';
+    font-size: 2vw;
+    font-weight: bold;
+    background-color:rgba(0, 0, 0, 0.252) ;
+    padding: 1vw 1vw 1vw 2vw;
+    
+}
+
+.resultMovies{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+.resultSeries{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+.peliculaSearch{
+    justify-content: center;
+    text-align: center;
+    margin: 0.5vw;
+    width: 15vw;
+    flex-wrap: wrap;
+}
+
+.errorSearch{
+    width: 50vw;
+    height: 30vw;
+    margin: 4vw;
+}

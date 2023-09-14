@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
-
+import Loader from "../../components/Loader/Loader";
 
 class SearchResults extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class SearchResults extends Component {
         <main>
           <div className="categoria">
             <h2 className="tituloResult">Results for: '{this.props.match.params.query}' </h2>
-              {this.state.result.length > 0 ? <CardsContainer verMasMovies={this.state.result}/> : <h3>Cargando...</h3> }
+              {this.state.result.length > 0 ? <CardsContainer verMasMovies={this.state.result}/> : <Loader/> }
           </div>
         </main>
 

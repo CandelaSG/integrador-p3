@@ -1,9 +1,12 @@
+
 .containerVerTodo{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-right: 1vw;
+
+    
 }
 .buttonVerMas {
     width: fit-content;

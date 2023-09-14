@@ -5,12 +5,16 @@
     padding-right: 0.5vw;
     width: 15vw;
     margin-bottom: 5vh;
+    color: white;
 }
 
 .nombre{
     display: block;
     text-align: center;
     color: white;
+}
+.botonInfo{
+    color: #f180e1;
 }
 .tituloCard{
     height: 4vh;

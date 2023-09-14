@@ -65,11 +65,14 @@ class Favorito extends Component {
     console.log(this.state.MoviesFav);
     return (
       <React.Fragment>
+        <main className="favoritosContainer">
         <h2>MOVIES</h2>
         {this.state.MoviesFav.length > 0 ? <CardsContainer verMasMovies={this.state.MoviesFav}/> : <h3 className="containerCards">Add a movie to your favorites</h3> }
         <h2>SERIES</h2>
         {this.state.SeriesFav.length > 0 ? <CardsContainer verMasSeries={this.state.SeriesFav}/> : <h3 className="containerCards">Add a serie to your favorites</h3> }
+        </main>
       </React.Fragment>
+      
     )
   }
 }

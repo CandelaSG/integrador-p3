@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import './VerTodo.css'
-import CardsContainer from "../../components/CardsContainer/CardsContainer"
-
+import './VerTodo.css';
+import CardsContainer from "../../components/CardsContainer/CardsContainer";
+import Loader from "../../components/Loader/Loader"
 
 class VerTodoUpcoming extends Component {
   constructor(props) {
@@ -45,7 +45,7 @@ class VerTodoUpcoming extends Component {
     return(
       <React.Fragment>
         {this.state.upcoming.length > 0 ?  
-            <main>
+            <main className="verTodoMain">
               <div className="containerVerTodo">
                 <h2 className="titleVerTodo">UPCOMING</h2>
                 <button onClick={() => this.showMoreMovies()} className="buttonVerMas"> <strong>More titles</strong></button>
@@ -53,7 +53,7 @@ class VerTodoUpcoming extends Component {
             <CardsContainer verMasMovies={this.state.upcoming} /> 
             </main>
         :
-        <h3>Cargando ...</h3>}
+        <Loader/>}
        
         
       </React.Fragment>

@@ -3,6 +3,7 @@ import './Home.css'
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
 import SearchHome from "../../components/Search/SearchHome";
 import { Link } from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
 
 class Home extends Component {
   constructor(props) {
@@ -40,8 +41,7 @@ class Home extends Component {
 
   render() {
     return(
-      
-        <main>
+        <main className="homeMain">
           <SearchHome/>
           <div className="categoria">
             <h2 className="tituloResult">MOVIES</h2>
@@ -49,7 +49,7 @@ class Home extends Component {
               <Link to={`/upcoming`}><h3 className="titulo">UPCOMING</h3> </Link>
                 <Link to={`/upcoming`}><p className="titulo"> <u>More titles</u></p></Link>
               </div>
-              {this.state.upcoming.length > 0 ? <CardsContainer infoMovies={this.state.upcoming}/> : <h3>Cargando...</h3> }
+              ( {this.state.upcoming.length > 0 ? <CardsContainer infoMovies={this.state.upcoming}/> : <Loader/> })
           </div>
           
           <h2 className="tituloResult">SERIES</h2>
@@ -60,12 +60,10 @@ class Home extends Component {
               <Link to={`/popular`}><p className="titulo"> <u>More titles</u></p></Link>
             </div>
           
-            {this.state.popular.length > 0 ? <CardsContainer infoSeries={this.state.popular}/> : <h3>Cargando...</h3> }
+            ({this.state.popular.length > 0 ? <CardsContainer infoSeries={this.state.popular}/> : <Loader/> })
 
-          </div>
-
-        </main>
-
+          </div> 
+        </main> 
     ) 
   }
 }

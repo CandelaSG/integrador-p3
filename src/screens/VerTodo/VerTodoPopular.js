@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './VerTodo.css';
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
+import Loader from "../../components/Loader/Loader";
 
 class VerTodoPopular extends Component {
     constructor(props) {
@@ -29,7 +30,7 @@ showMoreSeries() {
       .then((data) =>
         this.setState({
           popular: data.results.concat(this.state.popular),
-          page: pagenum + 1,
+          pageSerie: pagenum + 1,
         })
       )
       .catch((error) => console.log("El error es: " + error));
@@ -42,7 +43,7 @@ showMoreSeries() {
       <React.Fragment>
         
         {this.state.popular.length > 0 ?  
-            <main>
+            <main className="verTodoMain">
               <div className="containerVerTodo">
                 <h2 className="titleVerTodo">POPULAR</h2>
                 <button onClick={() => this.showMoreSeries()} className="buttonVerMas"> <strong>More titles</strong></button>
@@ -50,7 +51,7 @@ showMoreSeries() {
             <CardsContainer verMasSeries={this.state.popular} /> 
             </main>
         :
-        <h3>Cargando ...</h3>}
+        <Loader/>}
        
         
       </React.Fragment>

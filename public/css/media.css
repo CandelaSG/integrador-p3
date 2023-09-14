@@ -37,10 +37,7 @@
             display: none;
         }
     /* FAVORITOS */
-        .posterVerMas{
-            height: 23vh;
-            width: 14vw;
-        }
+        
     /* DETALLE SERIES Y PELÍCULAS */
         .infoContainer{
             margin: 2vw 0 3vw 0;
