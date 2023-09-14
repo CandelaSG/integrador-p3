@@ -7,7 +7,7 @@ class Card extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            textoFavoritos: 'Agregar a favs 💜',
+            clase: "fa-solid fa-heart",
             favoritos: [],
             masInfo: "SHOW INFO",
             botonInfo: <i className= "fa-solid fa-circle-info botonInfo"></i>
@@ -24,7 +24,7 @@ class Card extends Component {
             // Si está el id cambio el texto del botón
             if (arrayFavoritos.includes(this.props.contentMovie.id)) {
                 this.setState({
-                    textoFavoritos: 'Quitar de favs ❌'
+                    clase: "fa-solid fa-heart enFav"
                 })
             }
             
@@ -56,14 +56,14 @@ class Card extends Component {
             arrayFavoritos = arrayFavoritos.filter( unId => unId !== id);
 
             this.setState({
-                textoFavoritos: 'Agregar a favs 💜'
+                clase: "fa-solid fa-heart"
             })
 
 
         } else {
             arrayFavoritos.push(id);
             this.setState({
-                textoFavoritos: 'Quitar de favs ❌'
+                clase: "fa-solid fa-heart enFav"
             })
         }
 
@@ -82,20 +82,19 @@ class Card extends Component {
         return (
             
             <article className='pelicula'>
-                {/* {console.log(this.props.contentMovie.title)} */}
                 
-                <Link to={`/detallePelicula/id/${this.props.contentMovie.id}`}>
+                <Link to={`/movieDetail/id/${this.props.contentMovie.id}`}>
                 <img className='poster posterEvento' src= {imagen + this.props.contentMovie.poster_path}  alt={this.props.contentMovie.title}/>
                 </Link>
 
-                <Link to={`/detallePelicula/id/${this.props.contentMovie.id}`}>
+                <Link to={`/movieDetail/id/${this.props.contentMovie.id}`}>
                 {this.props.contentMovie.title} 
                 </Link>
 
-                 <a onClick={() => this.metodoVerMas()}> {this.state.botonInfo}</a>
-                <br/>
-                <button  onClick={()=> this.modificarFavoritos(this.props.contentMovie.id)} type='button'> {this.state.textoFavoritos} </button>
-
+                <div className='containerButton'>
+                    <a onClick={() => this.metodoVerMas()}> {this.state.botonInfo}</a>
+                    <a className='button' onClick={()=> this.modificarFavoritos(this.props.contentMovie.id)} type='button'> <i className={this.state.clase}/> </a>
+                </div>
                 {this.state.masInfo === "SHOW INFO" ?  false : <p>{this.props.contentMovie.overview}</p>}
             </article>
             

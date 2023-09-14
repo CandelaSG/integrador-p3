@@ -6,10 +6,27 @@ let imagen = 'https://image.tmdb.org/t/p/w500';
 class DetailMovie extends Component {
   constructor(props) {
     super(props);
-    this.state = false;
+    this.state = {
+      clase: "fa-solid fa-heart fa-xl",
+      favoritos: []
+    }
   }
 
   componentDidMount() {
+    let arrayFavoritos = []
+        let recuperoStorage = localStorage.getItem('favoritosMovie');
+
+        if (recuperoStorage != null){
+            arrayFavoritos = JSON.parse(recuperoStorage);
+
+            // Si está el id cambio el texto del botón
+            if (arrayFavoritos.includes(this.props.match.params.id)) {
+                this.setState({
+                  clase: "fa-solid fa-heart fa-xl enFav"
+                })
+            }
+            
+        }
     let movieId = this.props.match.params.id;
 
     fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US`)
@@ -22,7 +39,39 @@ class DetailMovie extends Component {
     .catch((error) => console.log("El error es: " + error));
 
   }
+  modificarFavoritos(id){
 
+    let arrayFavoritos = []
+    let recuperoStorage = localStorage.getItem('favoritosMovie');
+    
+    if(recuperoStorage !== null){
+       arrayFavoritos = JSON.parse(recuperoStorage);   
+    }
+       
+    if(arrayFavoritos.includes(id)){
+        //Si el id está en el array queremos sacar el id.
+        arrayFavoritos = arrayFavoritos.filter( unId => unId !== id);
+
+        this.setState({
+          clase: "fa-solid fa-heart fa-xl"
+        })
+
+
+    } else {
+        arrayFavoritos.push(id);
+        this.setState({
+          clase: "fa-solid fa-heart fa-xl enFav"
+        })
+    }
+
+    //Subirlo a local storage stringifeado
+    let arrayFavoritosAString = JSON.stringify(arrayFavoritos)
+    localStorage.setItem('favoritosMovie', arrayFavoritosAString)
+
+    console.log(localStorage)
+
+
+}
   render() {
     console.log(this.state.movie)
     return (
@@ -30,6 +79,12 @@ class DetailMovie extends Component {
             {this.state.movie ? 
                 ( <React.Fragment>
                   <h1 className="tituloDetail detailSeries"> {this.state.movie.title}</h1>
+
+                  <section className="seccionFav">            
+                      <article className="artFav">
+                      <a className="buttonDetail" onClick={()=> this.modificarFavoritos(this.props.match.params.id)}> <i className={this.state.clase}/></a>
+                      </article>
+                  </section>
 
                   <section className="infoContainer infoSeries">
                       <article className="conteinerPoster">
@@ -57,11 +112,7 @@ class DetailMovie extends Component {
 
                   </section>
                   
-                  <section className="seccionFav">            
-                      <article className="artFav">
-                          <a className="buttonFav clave" href=""> 🤍 Favorites</a>
-                      </article>
-                  </section>
+                  
 
               </React.Fragment>) : 
             (<h4>Cargando...</h4>)}

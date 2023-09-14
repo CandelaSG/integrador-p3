@@ -6,7 +6,8 @@ h1{
 }
 
 h2{
-    margin-left: 3VW;
+    margin-top: 0;
+    margin-left: 3vw;
     color: aliceblue;
     font-family:"Outfit";
     font-weight: bolder;
@@ -52,6 +53,13 @@ u{
 .posterEstreno{
     width: 100vw
 }
-.categoria{
-    height: 65vh;
+
+
+@media (hover: hover){
+    .pelicula:hover{
+        transform: translateY(-3px) scale(1.02);
+        box-shadow: 0 5px 5px 0px rgba(0, 0, 0, .2);
+    }
 }
+
+

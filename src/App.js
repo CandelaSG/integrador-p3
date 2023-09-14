@@ -3,12 +3,13 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Home from "./screens/Home/Home";
-import Favorito from "./screens/Favorito/Favorito";
+import Favorites from "./screens/Favorites/Favorites";
 import VerTodoUpcoming from "./screens/VerTodo/VerTodoUpcoming";
 import VerTodoPopular from "./screens/VerTodo/VerTodoPopular";
 import DetailMovie from "./screens/Detail/DetailMovie";
 import DetailSerie from "./screens/Detail/DetailSerie";
 import Notfound from "./screens/NotFound/NotFound";
+import SearchResults from "./screens/SearchResults/SearchResults";
 
 
 import { Route, Switch} from 'react-router-dom';
@@ -22,11 +23,12 @@ function App() {
       <Navbar/>
         <Switch>
           <Route path="/" exact={true} component={Home}/>
+          <Route path="/SearchResults/:query"  component={SearchResults}/>
           <Route path="/upcoming" component={VerTodoUpcoming}/>
           <Route path="/popular" component={VerTodoPopular}/>
-          <Route path="/favorites" component={Favorito}/>
-          <Route path="/detallePelicula/id/:id" component={DetailMovie}/>
-          <Route path="/detalleSeries/id/:id" component={DetailSerie}/>
+          <Route path="/favorites" component={Favorites}/>
+          <Route path="/movieDetail/id/:id" component={DetailMovie}/>
+          <Route path="/serieDetail/id/:id" component={DetailSerie}/>
           <Route path="" component={Notfound}/>
         </Switch>
       <Footer />

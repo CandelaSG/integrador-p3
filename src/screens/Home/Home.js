@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './Home.css'
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
+import SearchHome from "../../components/Search/SearchHome";
 import { Link } from "react-router-dom";
 
 class Home extends Component {
@@ -33,18 +34,19 @@ class Home extends Component {
         })
       })
       .catch((error) => console.log("El error es: " + error));
+
   }
+  
 
   render() {
     return(
+      
         <main>
-          {/* <div className="containerPoster">
-            <img className="posterEstreno" src="/img/posterInfinity.png" alt="Poster Infinity"/>
-          </div> */}
+          <SearchHome/>
           <div className="categoria">
             <h2 className="tituloResult">MOVIES</h2>
               <div className="titulosHome">
-                <h3 className="titulo">UPCOMING</h3> 
+              <Link to={`/upcoming`}><h3 className="titulo">UPCOMING</h3> </Link>
                 <Link to={`/upcoming`}><p className="titulo"> <u>More titles</u></p></Link>
               </div>
               {this.state.upcoming.length > 0 ? <CardsContainer infoMovies={this.state.upcoming}/> : <h3>Cargando...</h3> }
@@ -54,7 +56,7 @@ class Home extends Component {
 
           <div className="categoria">
             <div className="titulosHome">
-              <h3 className="titulo">POPULAR</h3> 
+            <Link to={`/popular`}><h3 className="titulo">POPULAR</h3> </Link>
               <Link to={`/popular`}><p className="titulo"> <u>More titles</u></p></Link>
             </div>
           

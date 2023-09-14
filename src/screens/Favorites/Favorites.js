@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './Favorito.css'
+import './Favorites.css'
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
 
 class Favorito extends Component {
@@ -66,9 +66,9 @@ class Favorito extends Component {
     return (
       <React.Fragment>
         <h2>MOVIES</h2>
-        {this.state.MoviesFav.length > 0 ? <CardsContainer verMasMovies={this.state.MoviesFav}/> : <h3>No tenes películas en favoritos</h3> }
+        {this.state.MoviesFav.length > 0 ? <CardsContainer verMasMovies={this.state.MoviesFav}/> : <h3 className="containerCards">Add a movie to your favorites</h3> }
         <h2>SERIES</h2>
-        {this.state.SeriesFav.length > 0 ? <CardsContainer verMasSeries={this.state.SeriesFav}/> : <h3>No tenes series en favoritos</h3> }
+        {this.state.SeriesFav.length > 0 ? <CardsContainer verMasSeries={this.state.SeriesFav}/> : <h3 className="containerCards">Add a serie to your favorites</h3> }
       </React.Fragment>
     )
   }

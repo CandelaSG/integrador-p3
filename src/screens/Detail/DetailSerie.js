@@ -6,9 +6,26 @@ let imagen = 'https://image.tmdb.org/t/p/w500';
 class DetailSerie extends Component {
   constructor(props) {
     super(props);
-    this.state = false
+    this.state = {
+      clase: "fa-solid fa-heart fa-xl",
+      favoritos: []
+    }
   }
   componentDidMount() {
+    let arrayFavoritos = []
+        let recuperoStorage = localStorage.getItem('favoritosSerie');
+
+        if (recuperoStorage != null){
+            arrayFavoritos = JSON.parse(recuperoStorage);
+
+            // Si está el id cambio el texto del botón
+            if (arrayFavoritos.includes(this.props.match.params.id)) {
+                this.setState({
+                  clase: "fa-solid fa-heart fa-xl enFav"
+                })
+            }
+            
+        }
     let serieId = this.props.match.params.id;
 
     fetch(`https://api.themoviedb.org/3/tv/${serieId}?api_key=0c5fb97f0c55576b638b49d73fa8d73e&language=en-US`)
@@ -21,7 +38,39 @@ class DetailSerie extends Component {
     .catch((error) => console.log("El error es: " + error));
 
   }
+  modificarFavoritos(id){
 
+    let arrayFavoritos = []
+    let recuperoStorage = localStorage.getItem('favoritosSerie');
+    
+    if(recuperoStorage !== null){
+       arrayFavoritos = JSON.parse(recuperoStorage);   
+    }
+       
+    if(arrayFavoritos.includes(id)){
+        //Si el id está en el array queremos sacar el id.
+        arrayFavoritos = arrayFavoritos.filter( unId => unId !== id);
+
+        this.setState({
+          clase: "fa-solid fa-heart fa-xl"
+        })
+
+
+    } else {
+        arrayFavoritos.push(id);
+        this.setState({
+          clase: "fa-solid fa-heart fa-xl enFav"
+        })
+    }
+
+    //Subirlo a local storage stringifeado
+    let arrayFavoritosAString = JSON.stringify(arrayFavoritos)
+    localStorage.setItem('favoritosSerie', arrayFavoritosAString)
+
+    console.log(localStorage)
+
+
+}
   render(){
     console.log(this.state.serie);
   
@@ -30,6 +79,12 @@ class DetailSerie extends Component {
             {this.state.serie ? 
                 <React.Fragment>
                 <h1 className="tituloDetail detailSeries"> {this.state.serie.name}</h1>
+
+                <section className="seccionFav">            
+                    <article className="artFav">
+                        <a className="buttonDetail" onClick={()=> this.modificarFavoritos(this.props.match.params.id)}> <i className={this.state.clase}/></a>
+                    </article>
+                </section>
 
                 <section className="infoContainer infoSeries">
                     <article className="conteinerPoster">
@@ -57,11 +112,7 @@ class DetailSerie extends Component {
 
                 </section>
                 
-                <section className="seccionFav">            
-                    <article className="artFav">
-                        <a className="buttonFav clave" href=""> 🤍 Favorites</a>
-                    </article>
-                </section>
+                
 
             </React.Fragment>
                 :

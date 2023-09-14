@@ -12,7 +12,6 @@ class VerTodoPopular extends Component {
     }
 
 componentDidMount() {
-    let endpoint = this.props.match.params.category;
     fetch(`https://api.themoviedb.org/3/tv/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=1`)
     .then((response) => response.json())
     .then((data) =>{
@@ -25,7 +24,6 @@ componentDidMount() {
 
 showMoreSeries() {
     let pagenum = this.state.pageSerie;
-
     fetch(`https://api.themoviedb.org/3/tv/popular?api_key=a3c55e0abc72e6abaa573f83ee40635f&language=en-US&page=${pagenum}`)
       .then((res) => res.json())
       .then((data) =>
@@ -42,10 +40,13 @@ showMoreSeries() {
     console.log(this.state.popular);
     return(
       <React.Fragment>
-        <h3>VER TODO:</h3>
+        
         {this.state.popular.length > 0 ?  
             <main>
-            <button onClick={() => this.showMoreSeries()}> Traer más </button>
+              <div className="containerVerTodo">
+                <h2 className="titleVerTodo">POPULAR</h2>
+                <button onClick={() => this.showMoreSeries()} className="buttonVerMas"> <strong>More titles</strong></button>
+              </div>
             <CardsContainer verMasSeries={this.state.popular} /> 
             </main>
         :

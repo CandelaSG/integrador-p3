@@ -12,3 +12,21 @@
     text-align: center;
     color: white;
 }
+.tituloCard{
+    height: 4vh;
+}
+.containerButton{
+    display: flex;
+    justify-content: flex-end;
+    width: 25vw;
+}
+.button{
+    padding-left: 5px;
+    color: white;
+}
+.enFav{
+    color: red;
+}
+.button :hover{
+    color: pink;
+}

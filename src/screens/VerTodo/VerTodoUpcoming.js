@@ -44,10 +44,12 @@ class VerTodoUpcoming extends Component {
     console.log(this.state.upcoming);
     return(
       <React.Fragment>
-        <h3>VER TODO:</h3>
         {this.state.upcoming.length > 0 ?  
             <main>
-            <button onClick={() => this.showMoreMovies()}> Traer más </button>
+              <div className="containerVerTodo">
+                <h2 className="titleVerTodo">UPCOMING</h2>
+                <button onClick={() => this.showMoreMovies()} className="buttonVerMas"> <strong>More titles</strong></button>
+              </div>
             <CardsContainer verMasMovies={this.state.upcoming} /> 
             </main>
         :
