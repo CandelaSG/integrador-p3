@@ -20,7 +20,7 @@ class SearchHome extends Component{
     }
     render(){
         return(
-            <form class="wrap" onSubmit={(evento) => this.detenerDefault(evento)}>
+            <div class="wrap" onSubmit={(evento) => this.detenerDefault(evento)}>
               <div class="search">
                   <input type="text" class="searchTerm" placeholder="What are you looking for?" onChange={(evento) => this.saveInput(evento)}
           value={this.state.value}/>
@@ -29,7 +29,7 @@ class SearchHome extends Component{
                 </button>
                 </Link>
               </div>
-            </form>
+            </div>
         )
     }
 }

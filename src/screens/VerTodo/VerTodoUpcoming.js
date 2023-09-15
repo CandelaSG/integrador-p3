@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import './VerTodo.css';
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
 import Loader from "../../components/Loader/Loader"
+import SearchFilter from "../../components/Search/SearchFilter";
 
 class VerTodoUpcoming extends Component {
   constructor(props) {
@@ -38,12 +39,21 @@ class VerTodoUpcoming extends Component {
       )
       .catch((error) => console.log("El error es: " + error));
   }
-
+  filtroUpcoming = (textoAFiltrar)=>{
+    let upcomingFiltrado = this.state.upcoming.filter((upcomingMovie)=>
+       (upcomingMovie.title.toUpperCase().includes(textoAFiltrar.toUpperCase())
+        )
+    )
+    this.setState({
+      upcoming : upcomingFiltrado
+    })
+    }
 
   render() {
     console.log(this.state.upcoming);
     return(
       <React.Fragment>
+        <SearchFilter filtrar={(text)=> this.filtroUpcoming(text)}/>
         {this.state.upcoming.length > 0 ?  
             <main className="verTodoMain">
               <div className="containerVerTodo">
