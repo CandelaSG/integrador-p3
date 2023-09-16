@@ -34,4 +34,3 @@ class SearchHome extends Component{
     }
 }
 export default SearchHome;
-

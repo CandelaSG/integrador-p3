@@ -73,8 +73,7 @@ class DetailSerie extends Component {
 
 }
   render(){
-    console.log(this.state.serie);
-  
+
     return (
         <main className="detailContainer">
             {this.state.serie ? 
@@ -106,9 +105,6 @@ class DetailSerie extends Component {
                     
                     
                         <p className="sinopsis">{this.state.serie.overview}</p>   
-                        {/* <div className="buttonTrailer">
-                            <a className="verTrailer" href="/"> ▶️ Ver Trailer </a> 
-                        </div> */}
                     </article>
 
                 </section>

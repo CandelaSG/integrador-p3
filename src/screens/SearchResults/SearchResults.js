@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
-import Loader from "../../components/Loader/Loader";
+import "./SearchResults.css"
 
 class SearchResults extends Component {
   constructor(props) {
@@ -21,13 +21,17 @@ class SearchResults extends Component {
   
 
   render() {
-    {console.log(this.state.result);}
     return(
-        <main>
-          <div className="categoria">
-            <h2 className="tituloResult">Results for: '{this.props.match.params.query}' </h2>
-              {this.state.result.length > 0 ? <CardsContainer verMasMovies={this.state.result}/> : <Loader/> }
-          </div>
+        <main className="searchContainer">
+          <h2 className="tituloResult">Results for: '{this.props.match.params.query}' </h2>
+              {this.state.result.length > 0 ? 
+              <div className="categoria"> 
+              <CardsContainer verMasMovies={this.state.result}/> 
+              </div>
+              : 
+              <h3 className="errorSearch">
+                Sorry, we couldn't find any results for "{this.props.match.params.query}"
+              </h3> }
         </main>
 
     ) 

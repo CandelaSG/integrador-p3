@@ -77,7 +77,7 @@ class CardSerie extends Component {
     }
 
     render(){
-        console.log(this.state.masInfo);
+
         return (
             <article className='pelicula'>
                 {/* {console.log(this.props.contentSerie.name)} */}
@@ -95,12 +95,6 @@ class CardSerie extends Component {
                 </div>
               {this.state.masInfo === "SHOW INFO" ?  false : <p>{this.props.contentSerie.overview}</p>}
               
-                
-                
-
-                {/* {this.state.masInfo === 'Ver mas' ?  false : <p>{this.props.contentSerie.overview}</p>}
-                <a onClick={() => this.metodoVerMas()}>{this.state.masInfo}</a> */}
-
                 
             </article>
             

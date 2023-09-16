@@ -3,6 +3,7 @@
     top: 50%;
     position: absolute;
     transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0); 
+    min-height: 100vh; 
 }
 #outline {
     stroke-dasharray: 2.42777px, 242.77666px;

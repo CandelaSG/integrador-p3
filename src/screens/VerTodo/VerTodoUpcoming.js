@@ -53,9 +53,9 @@ class VerTodoUpcoming extends Component {
     console.log(this.state.upcoming);
     return(
       <React.Fragment>
-        <SearchFilter filtrar={(text)=> this.filtroUpcoming(text)}/>
         {this.state.upcoming.length > 0 ?  
             <main className="verTodoMain">
+              <SearchFilter filtrar={(text)=> this.filtroUpcoming(text)}/>
               <div className="containerVerTodo">
                 <h2 className="titleVerTodo">UPCOMING</h2>
                 <button onClick={() => this.showMoreMovies()} className="buttonVerMas"> <strong>More titles</strong></button>

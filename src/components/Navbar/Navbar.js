@@ -27,14 +27,6 @@ function Navbar(){
                     </ul>
             </article>
 
-           {/*  <article>
-            <form action="/search-results" method="GET" className="buscadorContainer">
-                <input className="buscador" type="text" name="busqueda" placeholder="  Search movies, series..." />
-                <button type="submit" className="lupa">
-                    <i className="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
-            </article> */}
         </header>
     )
 }

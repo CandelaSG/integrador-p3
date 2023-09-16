@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     flex-direction: row;
     min-height: 28vh;
-    width: 100vw;
-    justify-content:space-around;
+    justify-content:space-evenly;
 }
 

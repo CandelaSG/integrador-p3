@@ -106,9 +106,6 @@ class DetailMovie extends Component {
                       
                       
                           <p className="sinopsis">{this.state.movie.overview}</p>   
-                          {/* <div className="buttonTrailer">
-                              <a className="verTrailer" href="/"> ▶️ Ver Trailer </a> 
-                          </div> */}
                       </article>
 
                   </section>

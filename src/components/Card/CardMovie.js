@@ -78,7 +78,6 @@ class Card extends Component {
 
 
     render(){
-        /* console.log(this.props.contentMovie); */
         return (
             
             <article className='pelicula'>
