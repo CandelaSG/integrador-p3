@@ -61,7 +61,9 @@ class VerTodoPopular extends Component {
             <CardsContainer verMasSeries={this.state.popular} /> 
             </main>
         :
-        <Loader/>}
+        <h3 className="errorSearch">
+        Sorry, we couldn't find any results
+        </h3>}
        
         
       </React.Fragment>

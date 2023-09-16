@@ -63,7 +63,10 @@ class VerTodoUpcoming extends Component {
             <CardsContainer verMasMovies={this.state.upcoming} /> 
             </main>
         :
-        <Loader/>}
+        <h3 className="errorSearch">
+        Sorry, we couldn't find any results
+        </h3>
+        }
        
         
       </React.Fragment>
